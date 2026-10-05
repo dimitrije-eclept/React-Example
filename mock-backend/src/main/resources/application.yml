@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: MessyNetBanking
+  profiles:
+    default: dev
+  jackson:
+    mapper:
+      # Keep fields in declaration order (Jackson 3 sorts alphabetically by default).
+      sort-properties-alphabetically: false
+
+server:
+  port: 8080
+
+messy:
+  auth:
+    access-ttl-seconds: 300
+    refresh-ttl-seconds: 1800
+    ticket-ttl-seconds: 300
+  payments:
+    execution-delay-seconds: 10
+  chaos:
+    enabled: false
+    latency-ms-min: 100
+    latency-ms-max: 600
+    error-rate: 0.05
+
+springdoc:
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method

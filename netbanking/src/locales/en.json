@@ -1,0 +1,332 @@
+{
+  "common": {
+    "errors": {
+      "unavailable": "We can't reach the bank right now. Please try again in a moment.",
+      "unknown": "Something went wrong. Please try again."
+    },
+    "load": {
+      "unavailable": "We can't reach the bank right now.",
+      "failed": "Something went wrong on our side.",
+      "tryAgain": "Please try again.",
+      "staleSince": "Showing what we had at {{time}}.",
+      "retry": "Retry now"
+    }
+  },
+  "auth": {
+    "layout": {
+      "headline": "Your accounts, payments and cards in one place.",
+      "sca": "Every sign-in and every payment is confirmed with a one-time SMS code.",
+      "idle": "For your security you are signed out after 5 minutes without activity."
+    },
+    "credentials": {
+      "step": "Step 1 of 2",
+      "title": "Sign in",
+      "username": "Username",
+      "password": "Password",
+      "usernameRequired": "Enter your username",
+      "passwordRequired": "Enter your password",
+      "submit": "Continue",
+      "next": "Next, we text a one-time code to the phone number on your profile.",
+      "invalid": "The username or password is incorrect.",
+      "demoHint": "Demo account: <code>{{username}}</code> / <code>{{password}}</code>, SMS code <code>{{code}}</code>."
+    },
+    "otp": {
+      "step": "Step 2 of 2",
+      "title": "Enter your code",
+      "sentTo": "We sent a {{length}}-digit code to <phone>{{phone}}</phone>.",
+      "label": "One-time code",
+      "digit": "Digit {{index}} of {{length}}",
+      "required": "Enter all {{length}} digits",
+      "wrongCode_one": "That code didn't match. <strong>{{count}} attempt left.</strong>",
+      "wrongCode_other": "That code didn't match. <strong>{{count}} attempts left.</strong>",
+      "locked": "<strong>Sign-in stopped.</strong> The code was entered wrong too many times. Start again to get a new code.",
+      "expired": "This code has expired. Start again to get a new one.",
+      "submit": "Verify and sign in",
+      "restart": "Start over"
+    }
+  },
+  "session": {
+    "endedTitle": "You've been signed out",
+    "idle": "For your security we end the session after 5 minutes without activity. Nothing you submitted was lost.",
+    "expired": "Your session has ended. Sign in again to continue.",
+    "signInAgain": "Sign in again"
+  },
+  "shell": {
+    "nav": {
+      "label": "Main",
+      "overview": "Overview",
+      "transactions": "Transactions",
+      "transfer": "Transfer",
+      "pay": "Pay",
+      "cards": "Cards",
+      "profile": "Profile"
+    },
+    "idleNote": "Signs out after 5 min idle",
+    "signOut": "Sign out"
+  },
+  "overview": {
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
+    },
+    "greetingName": "{{greeting}}, {{name}}",
+    "actions": {
+      "transfer": "Transfer",
+      "newPayment": "New payment"
+    }
+  },
+  "accounts": {
+    "heading": "Accounts",
+    "loading": "Loading accounts",
+    "empty": "You don't have any accounts yet.",
+    "available": "Available",
+    "booked": "Booked {{amount}}",
+    "pending": "{{amount}} pending",
+    "blocked": "Blocked",
+    "kind": {
+      "current": "Current",
+      "savings": "Savings",
+      "card": "Card"
+    },
+    "defaultName": {
+      "current": "Current account",
+      "savings": "Savings account",
+      "card": "Card account"
+    },
+    "history": "History",
+    "historyOf": "History of {{name}}"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "intro": "Booked and pending activity for one account.",
+    "listLabel": "Transaction list",
+    "loading": "Loading transactions",
+    "filters": {
+      "account": "Account",
+      "from": "From",
+      "to": "To",
+      "direction": "Direction",
+      "all": "All",
+      "in": "Money in",
+      "out": "Money out",
+      "rangeInvalid": "The start date must be on or before the end date."
+    },
+    "pageOf": "page {{page}} of {{count}}",
+    "pageOfCapital": "Page {{page}} of {{count}}",
+    "pages": "Pages",
+    "newer": "Newer",
+    "older": "Older",
+    "balances": "Available {{available}} · Booked {{booked}} {{currency}}",
+    "today": "Today, {{date}}",
+    "yesterday": "Yesterday, {{date}}",
+    "todayShort": "Today",
+    "yesterdayShort": "Yesterday",
+    "pending": "Pending",
+    "unnamed": "Transaction",
+    "noCounterparty": "No counterparty name provided",
+    "details": {
+      "reference": "Reference",
+      "booked": "Booked",
+      "made": "Made on",
+      "valueDate": "Value date",
+      "counterpartyAccount": "Counterparty account"
+    },
+    "empty": {
+      "range": "No transactions between {{from}} and {{to}}",
+      "any": "No transactions match these filters.",
+      "hint": "Try a wider date range or a different direction."
+    },
+    "recent": {
+      "title": "Recent activity",
+      "all": "All transactions",
+      "empty": "No transactions yet."
+    }
+  },
+  "transfers": {
+    "title": "Transfer between your accounts",
+    "intro": "Moves money instantly. Both accounts must use the same currency.",
+    "from": "From",
+    "to": "To",
+    "sourceOption": "{{name}} · {{amount}} available",
+    "otherCurrency": "{{currency}} account, can't receive {{source}}",
+    "blockedAccount": "Blocked account",
+    "noDestination": "None of your other accounts is in {{currency}}.",
+    "amount": "Amount",
+    "upTo": "Up to {{amount}}",
+    "description": "Description",
+    "optional": "Optional, up to 140 characters.",
+    "submit": "Transfer",
+    "submitAmount": "Transfer {{amount}}",
+    "cancel": "Cancel",
+    "summary": {
+      "title": "Summary",
+      "amount": "Amount",
+      "note": "No fee. Shows as booked on both accounts right away."
+    },
+    "errors": {
+      "toRequired": "Choose the account that receives the money.",
+      "amountRequired": "Enter an amount.",
+      "amountFormat": "Enter an amount like 1.500,00.",
+      "amountPositive": "The amount must be more than zero.",
+      "amountTooHigh": "You can transfer up to {{amount}}.",
+      "descriptionTooLong": "Keep the description to {{max}} characters.",
+      "funds": "<strong>Not enough money on {{account}}.</strong> You can transfer up to {{amount}}.",
+      "currency": "<strong>These accounts use different currencies.</strong> Pick a destination account in {{currency}}.",
+      "notFound": "One of the accounts couldn't be found. Reload the page and try again.",
+      "validation": "The bank didn't accept these details. Check them and try again.",
+      "rejected": "The bank didn't accept this value.",
+      "unavailable": "<strong>We can't reach the bank right now.</strong> Sending the same transfer again is safe: it will be made only once.",
+      "unknown": "<strong>We couldn't confirm this transfer.</strong> Sending the same transfer again is safe: it will be made only once. Check the history before changing the details."
+    },
+    "done": "<strong>{{amount}} moved to {{account}}.</strong>"
+  },
+  "payments": {
+    "steps": {
+      "label": "Payment steps",
+      "details": "Details",
+      "confirm": "Confirm with SMS code",
+      "status": "Status"
+    },
+    "cancel": "Cancel",
+    "details": {
+      "title": "New payment",
+      "intro": "Domestic payment in dinars to any account in Serbia.",
+      "from": "Pay from",
+      "fromHint": "Only RSD accounts can make domestic payments.",
+      "fromOption": "{{name}} · {{amount}} available",
+      "noPayer": "You need an active RSD account to make a domestic payment.",
+      "recipientName": "Recipient name",
+      "recipientIban": "Recipient account (IBAN)",
+      "ibanValid": "Valid account number",
+      "amount": "Amount",
+      "purposeCode": "Payment code",
+      "reference": "Reference number",
+      "description": "Description",
+      "optional": "Optional",
+      "review": "Review payment"
+    },
+    "purpose": {
+      "289": "Transactions ordered by citizens",
+      "221": "Goods and services, final consumption",
+      "253": "Public revenue payments",
+      "254": "Taxes and contributions",
+      "290": "Other transactions"
+    },
+    "errors": {
+      "nameRequired": "Enter who you are paying.",
+      "ibanRequired": "Enter the recipient's account.",
+      "ibanInvalid": "This isn't a valid IBAN. Check it against the bill.",
+      "amountRequired": "Enter an amount.",
+      "amountFormat": "Enter an amount like 1.500,00.",
+      "amountPositive": "The amount must be more than zero.",
+      "amountTooHigh": "You can pay up to {{amount}}.",
+      "tooLong": "Keep it to {{max}} characters.",
+      "rejected": "The bank didn't accept this value.",
+      "accountNotFound": "Your account couldn't be found. Reload the page and try again.",
+      "validation": "The bank didn't accept these details. Check them and try again."
+    },
+    "confirm": {
+      "title": "Check and confirm",
+      "youArePaying": "You are paying",
+      "to": "To",
+      "recipientAccount": "Recipient account",
+      "from": "From",
+      "purposeCode": "Payment code",
+      "reference": "Reference",
+      "description": "Description",
+      "edit": "Edit details",
+      "codeTitle": "Enter SMS code",
+      "codeSent": "We sent a code to <phone>{{phone}}</phone>. Entering it authorises exactly this payment.",
+      "codeLabel": "SMS code",
+      "attempts": "3 attempts. After the third wrong code, this payment is cancelled.",
+      "wrongCode_one": "That code didn't match. <strong>{{count}} attempt left.</strong>",
+      "wrongCode_other": "That code didn't match. <strong>{{count}} attempts left.</strong>",
+      "notFound": "This payment can't be found any more. Start a new one.",
+      "submit": "Confirm payment",
+      "cancel": "Cancel payment"
+    },
+    "status": {
+      "chip": {
+        "processing": "Processing",
+        "executed": "Executed",
+        "rejected": "Rejected",
+        "cancelled": "Cancelled",
+        "not_found": "Unknown"
+      },
+      "processingTitle": "Payment sent for processing",
+      "processingText": "{{amount}} to {{recipient}}",
+      "executedTitle": "Payment executed",
+      "executedText": "{{amount}} paid to {{recipient}}",
+      "rejectedTitle": "The payment couldn't be completed",
+      "rejectedText": "No money left your account. The reserved amount is available again.",
+      "fundsTitle": "Not enough money for this payment",
+      "fundsText": "There wasn't enough money on {{account}} when you confirmed. Nothing was paid.",
+      "cancelledTitle": "Payment cancelled for your security",
+      "cancelledText": "The SMS code was entered wrong 3 times. Nothing was paid.",
+      "reference": "Reference",
+      "created": "Payment created",
+      "confirmed": "Confirmed with SMS code",
+      "reserved": "funds reserved",
+      "bankProcessing": "Processing by the bank",
+      "autoUpdate": "Usually a few seconds. This page updates by itself.",
+      "executed": "Executed",
+      "availableLowered": "available balance already lowered by {{amount}}.",
+      "bookedLater": "Your booked balance changes once the payment is executed.",
+      "pollError": "We can't check the status right now. We keep trying.",
+      "stalledTitle": "Still processing",
+      "stalledText": "{{amount}} to {{recipient}}. This is taking longer than usual. The payment shows in your transactions once the bank executes it.",
+      "noAutoUpdate": "Taking longer than usual. This page no longer updates by itself.",
+      "checkAgain": "Check again",
+      "notFoundTitle": "We can't find this payment",
+      "notFoundText": "The bank no longer shows its status. Check your transactions before paying again.",
+      "viewHistory": "View transactions",
+      "backToOverview": "Back to overview",
+      "newPayment": "New payment"
+    }
+  },
+  "cards": {
+    "title": "Cards",
+    "intro": "Block a card straight away if it's lost or you notice something odd. You can unblock it later.",
+    "label": "{{network}} {{kind}} ·· {{lastFour}}",
+    "network": {
+      "visa": "Visa",
+      "mastercard": "Mastercard",
+      "other": "Card"
+    },
+    "kind": {
+      "debit": "Debit",
+      "credit": "Credit"
+    },
+    "expires": "Expires {{date}}",
+    "linkedAccount": "Linked account",
+    "creditLimit": "Credit limit",
+    "available": "Available",
+    "limitShort": "Limit {{amount}}",
+    "active": "Active",
+    "blocked": "Blocked",
+    "blockedNote": "Payments and withdrawals are off.",
+    "block": "Block card",
+    "unblock": "Unblock",
+    "blockedDone": "{{card}} is blocked. Payments and withdrawals are off.",
+    "unblockedDone": "{{card}} works again.",
+    "notFound": "This card couldn't be found. Reload the page and try again.",
+    "empty": "You don't have any cards.",
+    "manage": "Manage"
+  },
+  "profile": {
+    "title": "Profile",
+    "signedInToday": "Signed in today at {{time}}",
+    "signedInOn": "Signed in on {{date}} at {{time}}",
+    "contact": "Contact details",
+    "email": "Email",
+    "phone": "Phone",
+    "security": "Security",
+    "signInMethod": "Sign-in",
+    "signInMethodValue": "Password + SMS code",
+    "codesSentTo": "Codes sent to",
+    "autoSignOut": "Automatic sign-out",
+    "autoSignOutValue": "After 5 min idle",
+    "language": "Language"
+  }
+}

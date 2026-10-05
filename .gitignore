@@ -1,0 +1,55 @@
+# Workspace-wide ignores. Each project keeps its own .gitignore too
+# (netbanking/.gitignore for Vite/Node, mock-backend/.gitignore for Maven/Spring).
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors and IDEs
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.iml
+*.swp
+*~
+
+# Secrets and machine-specific settings. Shared, non-secret defaults (.env.development,
+# .env.example) are committed; put anything personal or secret in a *.local file.
+.env
+.env.local
+.env.*.local
+*.local
+*.pem
+*.key
+
+# Claude Code: personal settings stay local (shared .claude/settings.json may be committed)
+.claude/settings.local.json
+
+# Node / Vite (netbanking/)
+node_modules/
+dist/
+dist-ssr/
+coverage/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Java / Maven (mock-backend/)
+target/
+.mvn/wrapper/maven-wrapper.jar
+*.class
+hs_err_pid*
+replay_pid*
+
+# Logs
+logs/
+*.log

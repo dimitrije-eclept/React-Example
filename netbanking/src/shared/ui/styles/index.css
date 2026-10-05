@@ -1,0 +1,165 @@
+@import 'tailwindcss';
+
+/*
+ * IBM Plex, self-hosted (ADR security baseline: no third-party requests, strict CSP). Only the
+ * weights the design uses. Each file declares unicode-range per subset, so browsers download just
+ * latin + latin-ext (Serbian č ć đ š ž) for our text.
+ */
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-sans/700.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+
+/* Design tokens (see the netbanking design draft). Used as Tailwind utilities: bg-ground, text-muted, … */
+@theme {
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-ground: #eef0ec;
+  --color-ink: #14201b;
+  --color-muted: #5b6862;
+  --color-ink-soft: #3e4a44;
+  --color-line: #dce1dc;
+  /* Dividers inside a card (rows, footers) */
+  --color-hairline: #e7ebe7;
+  --color-skeleton: #e3e7e2;
+  /* Day headings in lists, expanded rows */
+  --color-band: #f6f7f4;
+  --color-subtle: #fafbf9;
+  /* Money coming in */
+  --color-credit: #0b6b4c;
+  --color-field: #b8c1ba;
+  /* Borders of secondary buttons and option cards */
+  --color-control: #c3cbc5;
+
+  --color-brand: #0f5c4a;
+  --color-brand-hover: #0a4537;
+  /* Selected option background */
+  --color-brand-soft: #f3f8f5;
+
+  /* Dark surfaces: sidebar, sign-in aside */
+  --color-night: #12201a;
+  --color-night-text: #e6ece8;
+  --color-night-muted: #b9c6bf;
+  --color-night-faint: #9dada5;
+  --color-night-hover: #1b2d26;
+  --color-night-active: #24402f;
+  --color-night-line: #24352e;
+  --color-mint: #3fb68b;
+
+  /* Card faces */
+  --color-card-debit: #1f4a3b;
+  --color-card-credit: #14201b;
+  --color-card-blocked: #9aa59e;
+  --color-card-face-muted: #cfe0d7;
+
+  --color-danger: #c0392b;
+  --color-danger-soft: #fbe7e3;
+  --color-danger-ink: #7e2414;
+  --color-danger-line: #f1c4ba;
+
+  --color-warning-soft: #fdf1df;
+  --color-warning-ink: #6e3b05;
+  --color-warning-line: #f2d6ac;
+
+  --color-success-soft: #e2f2ea;
+  --color-success-ink: #0b4a37;
+  --color-success-line: #bfdccd;
+
+  /* Raised surfaces over the page (session-ended dialog) */
+  --shadow-dialog: 0 12px 32px color-mix(in srgb, var(--color-ink) 14%, transparent);
+
+  /* Motion: short and calm. Everything is switched off for prefers-reduced-motion (below). */
+  --ease-out-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animate-enter: enter 240ms var(--ease-out-soft) both;
+  --animate-pop: pop 260ms var(--ease-out-soft) both;
+  --animate-pulse-ring: pulse-ring 1.8s ease-out infinite;
+
+  @keyframes enter {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+  }
+  @keyframes pop {
+    from {
+      opacity: 0;
+      transform: scale(0.96);
+    }
+  }
+  @keyframes pulse-ring {
+    0% {
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-pending-line) 45%, transparent);
+    }
+    70%,
+    100% {
+      box-shadow: 0 0 0 8px transparent;
+    }
+  }
+
+  /* Status chips */
+  --color-pending-soft: #fbebd3;
+  --color-pending-ink: #7a4206;
+  --color-pending-line: #d98a1e;
+  --color-positive-soft: #ddf1e7;
+  --color-positive-ink: #0b5a40;
+  --color-negative-soft: #f9ded9;
+  --color-negative-ink: #8f2a1c;
+  --color-muted-soft: #e6e9e5;
+  /* Outline of a step that hasn't happened yet */
+  --color-faint-line: #9aa59e;
+}
+
+@layer base {
+  body {
+    @apply bg-ground font-sans text-[15px] leading-normal text-ink antialiased;
+  }
+}
+
+/*
+ * Page transitions (View Transitions API via React Router's `viewTransition`). Only the content
+ * area animates; the sidebar stays put. Browsers without the API just navigate.
+ */
+@layer base {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+  ::view-transition-old(page) {
+    animation: 120ms ease-in both page-out;
+  }
+  ::view-transition-new(page) {
+    animation: 260ms var(--ease-out-soft) 60ms both page-in;
+  }
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}

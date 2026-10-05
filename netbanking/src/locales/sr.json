@@ -1,0 +1,334 @@
+{
+  "common": {
+    "errors": {
+      "unavailable": "Trenutno ne možemo da uspostavimo vezu sa bankom. Pokušajte ponovo za trenutak.",
+      "unknown": "Nešto nije u redu. Pokušajte ponovo."
+    },
+    "load": {
+      "unavailable": "Trenutno ne možemo da uspostavimo vezu sa bankom.",
+      "failed": "Nešto nije u redu na našoj strani.",
+      "tryAgain": "Pokušajte ponovo.",
+      "staleSince": "Prikazujemo podatke od {{time}}.",
+      "retry": "Pokušaj ponovo"
+    }
+  },
+  "auth": {
+    "layout": {
+      "headline": "Vaši računi, plaćanja i kartice na jednom mestu.",
+      "sca": "Svaku prijavu i svako plaćanje potvrđujete jednokratnim kodom iz SMS poruke.",
+      "idle": "Radi vaše bezbednosti, odjavljujemo vas posle 5 minuta neaktivnosti."
+    },
+    "credentials": {
+      "step": "Korak 1 od 2",
+      "title": "Prijava",
+      "username": "Korisničko ime",
+      "password": "Lozinka",
+      "usernameRequired": "Unesite korisničko ime",
+      "passwordRequired": "Unesite lozinku",
+      "submit": "Nastavi",
+      "next": "Zatim vam šaljemo jednokratni kod SMS porukom na broj telefona iz profila.",
+      "invalid": "Korisničko ime ili lozinka nisu ispravni.",
+      "demoHint": "Demo nalog: <code>{{username}}</code> / <code>{{password}}</code>, SMS kod <code>{{code}}</code>."
+    },
+    "otp": {
+      "step": "Korak 2 od 2",
+      "title": "Unesite kod",
+      "sentTo": "Poslali smo kod od {{length}} cifara na <phone>{{phone}}</phone>.",
+      "label": "Jednokratni kod",
+      "digit": "Cifra {{index}} od {{length}}",
+      "required": "Unesite svih {{length}} cifara",
+      "wrongCode_one": "Kod nije ispravan. <strong>Preostao je još {{count}} pokušaj.</strong>",
+      "wrongCode_few": "Kod nije ispravan. <strong>Preostala su još {{count}} pokušaja.</strong>",
+      "wrongCode_other": "Kod nije ispravan. <strong>Preostalo je još {{count}} pokušaja.</strong>",
+      "locked": "<strong>Prijava je zaustavljena.</strong> Kod je previše puta pogrešno unet. Počnite ponovo da biste dobili novi kod.",
+      "expired": "Kod je istekao. Počnite ponovo da biste dobili novi.",
+      "submit": "Potvrdi i prijavi se",
+      "restart": "Počni ponovo"
+    }
+  },
+  "session": {
+    "endedTitle": "Odjavljeni ste",
+    "idle": "Radi vaše bezbednosti, sesiju završavamo posle 5 minuta neaktivnosti. Ništa od onoga što ste poslali nije izgubljeno.",
+    "expired": "Vaša sesija je istekla. Prijavite se ponovo da biste nastavili.",
+    "signInAgain": "Prijavi se ponovo"
+  },
+  "shell": {
+    "nav": {
+      "label": "Glavni meni",
+      "overview": "Pregled",
+      "transactions": "Transakcije",
+      "transfer": "Prenos",
+      "pay": "Plaćanje",
+      "cards": "Kartice",
+      "profile": "Profil"
+    },
+    "idleNote": "Odjava posle 5 min neaktivnosti",
+    "signOut": "Odjavi se"
+  },
+  "overview": {
+    "greeting": {
+      "morning": "Dobro jutro",
+      "afternoon": "Dobar dan",
+      "evening": "Dobro veče"
+    },
+    "greetingName": "{{greeting}}, {{name}}",
+    "actions": {
+      "transfer": "Prenos",
+      "newPayment": "Novo plaćanje"
+    }
+  },
+  "accounts": {
+    "heading": "Računi",
+    "loading": "Učitavanje računa",
+    "empty": "Još nemate nijedan račun.",
+    "available": "Raspoloživo",
+    "booked": "Knjiženo {{amount}}",
+    "pending": "{{amount}} na čekanju",
+    "blocked": "Blokiran",
+    "kind": {
+      "current": "Tekući",
+      "savings": "Štedni",
+      "card": "Kartični"
+    },
+    "defaultName": {
+      "current": "Tekući račun",
+      "savings": "Štedni račun",
+      "card": "Kartični račun"
+    },
+    "history": "Istorija",
+    "historyOf": "Istorija: {{name}}"
+  },
+  "transactions": {
+    "title": "Transakcije",
+    "intro": "Knjižene transakcije i transakcije na čekanju za jedan račun.",
+    "listLabel": "Lista transakcija",
+    "loading": "Učitavanje transakcija",
+    "filters": {
+      "account": "Račun",
+      "from": "Od",
+      "to": "Do",
+      "direction": "Smer",
+      "all": "Sve",
+      "in": "Uplate",
+      "out": "Isplate",
+      "rangeInvalid": "Početni datum ne sme biti posle krajnjeg."
+    },
+    "pageOf": "strana {{page}} od {{count}}",
+    "pageOfCapital": "Strana {{page}} od {{count}}",
+    "pages": "Stranice",
+    "newer": "Novije",
+    "older": "Starije",
+    "balances": "Raspoloživo {{available}} · Knjiženo {{booked}} {{currency}}",
+    "today": "Danas, {{date}}",
+    "yesterday": "Juče, {{date}}",
+    "todayShort": "Danas",
+    "yesterdayShort": "Juče",
+    "pending": "Na čekanju",
+    "unnamed": "Transakcija",
+    "noCounterparty": "Naziv druge strane nije naveden",
+    "details": {
+      "reference": "Referenca",
+      "booked": "Knjiženo",
+      "made": "Datum",
+      "valueDate": "Datum valute",
+      "counterpartyAccount": "Račun druge strane"
+    },
+    "empty": {
+      "range": "Nema transakcija od {{from}} do {{to}}",
+      "any": "Nema transakcija za izabrane filtere.",
+      "hint": "Probajte širi period ili drugi smer."
+    },
+    "recent": {
+      "title": "Nedavne transakcije",
+      "all": "Sve transakcije",
+      "empty": "Još nema transakcija."
+    }
+  },
+  "transfers": {
+    "title": "Prenos između vaših računa",
+    "intro": "Novac stiže odmah. Oba računa moraju biti u istoj valuti.",
+    "from": "Sa računa",
+    "to": "Na račun",
+    "sourceOption": "{{name}} · raspoloživo {{amount}}",
+    "otherCurrency": "Račun u valuti {{currency}}, ne može da primi {{source}}",
+    "blockedAccount": "Blokiran račun",
+    "noDestination": "Nijedan drugi vaš račun nije u valuti {{currency}}.",
+    "amount": "Iznos",
+    "upTo": "Najviše {{amount}}",
+    "description": "Opis",
+    "optional": "Nije obavezno, najviše 140 karaktera.",
+    "submit": "Prenesi",
+    "submitAmount": "Prenesi {{amount}}",
+    "cancel": "Otkaži",
+    "summary": {
+      "title": "Pregled",
+      "amount": "Iznos",
+      "note": "Bez provizije. Odmah se vidi kao knjiženo na oba računa."
+    },
+    "errors": {
+      "toRequired": "Izaberite račun na koji ide novac.",
+      "amountRequired": "Unesite iznos.",
+      "amountFormat": "Unesite iznos u obliku 1.500,00.",
+      "amountPositive": "Iznos mora biti veći od nule.",
+      "amountTooHigh": "Možete preneti najviše {{amount}}.",
+      "descriptionTooLong": "Opis može imati najviše {{max}} karaktera.",
+      "funds": "<strong>Na računu {{account}} nema dovoljno sredstava.</strong> Možete preneti najviše {{amount}}.",
+      "currency": "<strong>Računi su u različitim valutama.</strong> Izaberite račun u valuti {{currency}}.",
+      "notFound": "Jedan od računa nije pronađen. Osvežite stranicu i pokušajte ponovo.",
+      "validation": "Banka nije prihvatila ove podatke. Proverite ih i pokušajte ponovo.",
+      "rejected": "Banka nije prihvatila ovu vrednost.",
+      "unavailable": "<strong>Trenutno ne možemo da uspostavimo vezu sa bankom.</strong> Isti prenos možete bezbedno poslati ponovo: biće izvršen samo jednom.",
+      "unknown": "<strong>Nismo mogli da potvrdimo ovaj prenos.</strong> Isti prenos možete bezbedno poslati ponovo: biće izvršen samo jednom. Pre izmene podataka proverite promet."
+    },
+    "done": "<strong>{{amount}} prebačeno na {{account}}.</strong>"
+  },
+  "payments": {
+    "steps": {
+      "label": "Koraci plaćanja",
+      "details": "Podaci",
+      "confirm": "Potvrda SMS kodom",
+      "status": "Status"
+    },
+    "cancel": "Otkaži",
+    "details": {
+      "title": "Novo plaćanje",
+      "intro": "Plaćanje u dinarima na bilo koji račun u Srbiji.",
+      "from": "Plaćam sa računa",
+      "fromHint": "Samo dinarski računi mogu da se koriste za plaćanja u zemlji.",
+      "fromOption": "{{name}} · raspoloživo {{amount}}",
+      "noPayer": "Za plaćanje u zemlji potreban vam je aktivan dinarski račun.",
+      "recipientName": "Primalac",
+      "recipientIban": "Račun primaoca (IBAN)",
+      "ibanValid": "Ispravan broj računa",
+      "amount": "Iznos",
+      "purposeCode": "Šifra plaćanja",
+      "reference": "Poziv na broj",
+      "description": "Svrha plaćanja",
+      "optional": "Nije obavezno",
+      "review": "Pregledaj plaćanje"
+    },
+    "purpose": {
+      "289": "Transakcije po nalogu građana",
+      "221": "Promet robe i usluga – finalna potrošnja",
+      "253": "Uplata javnih prihoda",
+      "254": "Uplata poreza i doprinosa",
+      "290": "Druge transakcije"
+    },
+    "errors": {
+      "nameRequired": "Unesite kome plaćate.",
+      "ibanRequired": "Unesite račun primaoca.",
+      "ibanInvalid": "Ovo nije ispravan IBAN. Proverite ga na računu.",
+      "amountRequired": "Unesite iznos.",
+      "amountFormat": "Unesite iznos u obliku 1.500,00.",
+      "amountPositive": "Iznos mora biti veći od nule.",
+      "amountTooHigh": "Možete platiti najviše {{amount}}.",
+      "tooLong": "Najviše {{max}} karaktera.",
+      "rejected": "Banka nije prihvatila ovu vrednost.",
+      "accountNotFound": "Vaš račun nije pronađen. Osvežite stranicu i pokušajte ponovo.",
+      "validation": "Banka nije prihvatila ove podatke. Proverite ih i pokušajte ponovo."
+    },
+    "confirm": {
+      "title": "Proverite i potvrdite",
+      "youArePaying": "Plaćate",
+      "to": "Primalac",
+      "recipientAccount": "Račun primaoca",
+      "from": "Sa računa",
+      "purposeCode": "Šifra plaćanja",
+      "reference": "Poziv na broj",
+      "description": "Svrha",
+      "edit": "Izmeni podatke",
+      "codeTitle": "Unesite SMS kod",
+      "codeSent": "Poslali smo kod na <phone>{{phone}}</phone>. Unosom koda odobravate tačno ovo plaćanje.",
+      "codeLabel": "SMS kod",
+      "attempts": "Imate 3 pokušaja. Posle trećeg pogrešnog koda plaćanje se otkazuje.",
+      "wrongCode_one": "Kod nije ispravan. <strong>Preostao je još {{count}} pokušaj.</strong>",
+      "wrongCode_few": "Kod nije ispravan. <strong>Preostala su još {{count}} pokušaja.</strong>",
+      "wrongCode_other": "Kod nije ispravan. <strong>Preostalo je još {{count}} pokušaja.</strong>",
+      "notFound": "Ovo plaćanje više ne postoji. Započnite novo.",
+      "submit": "Potvrdi plaćanje",
+      "cancel": "Otkaži plaćanje"
+    },
+    "status": {
+      "chip": {
+        "processing": "U obradi",
+        "executed": "Izvršeno",
+        "rejected": "Odbijeno",
+        "cancelled": "Otkazano",
+        "not_found": "Nepoznato"
+      },
+      "processingTitle": "Plaćanje je poslato na obradu",
+      "processingText": "{{amount}} za {{recipient}}",
+      "executedTitle": "Plaćanje je izvršeno",
+      "executedText": "{{amount}} plaćeno primaocu {{recipient}}",
+      "rejectedTitle": "Plaćanje nije moglo da se izvrši",
+      "rejectedText": "Novac nije skinut sa računa. Rezervisani iznos je ponovo raspoloživ.",
+      "fundsTitle": "Nema dovoljno sredstava za ovo plaćanje",
+      "fundsText": "Na računu {{account}} nije bilo dovoljno sredstava kada ste potvrdili. Ništa nije plaćeno.",
+      "cancelledTitle": "Plaćanje je otkazano radi vaše bezbednosti",
+      "cancelledText": "SMS kod je tri puta pogrešno unet. Ništa nije plaćeno.",
+      "reference": "Referenca",
+      "created": "Plaćanje kreirano",
+      "confirmed": "Potvrđeno SMS kodom",
+      "reserved": "sredstva rezervisana",
+      "bankProcessing": "Banka obrađuje plaćanje",
+      "autoUpdate": "Obično traje nekoliko sekundi. Stranica se sama osvežava.",
+      "executed": "Izvršeno",
+      "availableLowered": "raspoloživo stanje je već umanjeno za {{amount}}.",
+      "bookedLater": "Knjiženo stanje se menja kada se plaćanje izvrši.",
+      "pollError": "Trenutno ne možemo da proverimo status. Pokušavamo ponovo.",
+      "stalledTitle": "Plaćanje je još u obradi",
+      "stalledText": "{{amount}} za {{recipient}}. Obrada traje duže nego obično. Plaćanje će se pojaviti u transakcijama kada ga banka izvrši.",
+      "noAutoUpdate": "Traje duže nego obično. Stranica se više ne osvežava sama.",
+      "checkAgain": "Proveri ponovo",
+      "notFoundTitle": "Ne možemo da pronađemo ovo plaćanje",
+      "notFoundText": "Banka više ne prikazuje njegov status. Proverite transakcije pre nego što ponovo platite.",
+      "viewHistory": "Pogledaj transakcije",
+      "backToOverview": "Nazad na pregled",
+      "newPayment": "Novo plaćanje"
+    }
+  },
+  "cards": {
+    "title": "Kartice",
+    "intro": "Odmah blokirajte karticu ako je izgubite ili primetite nešto neobično. Kasnije je možete odblokirati.",
+    "label": "{{network}} {{kind}} ·· {{lastFour}}",
+    "network": {
+      "visa": "Visa",
+      "mastercard": "Mastercard",
+      "other": "Kartica"
+    },
+    "kind": {
+      "debit": "Debitna",
+      "credit": "Kreditna"
+    },
+    "expires": "Važi do {{date}}",
+    "linkedAccount": "Povezani račun",
+    "creditLimit": "Kreditni limit",
+    "available": "Raspoloživo",
+    "limitShort": "Limit {{amount}}",
+    "active": "Aktivna",
+    "blocked": "Blokirana",
+    "blockedNote": "Plaćanja i podizanje gotovine su isključeni.",
+    "block": "Blokiraj karticu",
+    "unblock": "Odblokiraj",
+    "blockedDone": "{{card}} je blokirana. Plaćanja i podizanje gotovine su isključeni.",
+    "unblockedDone": "{{card}} ponovo radi.",
+    "notFound": "Kartica nije pronađena. Osvežite stranicu i pokušajte ponovo.",
+    "empty": "Nemate nijednu karticu.",
+    "manage": "Upravljaj"
+  },
+  "profile": {
+    "title": "Profil",
+    "signedInToday": "Prijavljeni danas u {{time}}",
+    "signedInOn": "Prijavljeni {{date}} u {{time}}",
+    "contact": "Kontakt podaci",
+    "email": "E-pošta",
+    "phone": "Telefon",
+    "security": "Bezbednost",
+    "signInMethod": "Prijava",
+    "signInMethodValue": "Lozinka + SMS kod",
+    "codesSentTo": "Kodovi se šalju na",
+    "autoSignOut": "Automatska odjava",
+    "autoSignOutValue": "Posle 5 min neaktivnosti",
+    "language": "Jezik"
+  }
+}
